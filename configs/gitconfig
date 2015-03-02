@@ -1,8 +1,16 @@
 [user]
-	name = Matt Carrier
-	email = icecreammatt@gmail.com
+	name = Cheryl MacDonald
+	email = cheryl@vertigo.com
 [color]
 	ui = true
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[color "status"]
+  changed = yellow
+  added = green
+  untracked = red
 [merge]
 	tool = p4merge
 [core]
