@@ -1,0 +1,1 @@
+source ~/home/chery_000/dotfiles/configs/aliases
