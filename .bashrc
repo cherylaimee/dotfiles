@@ -196,8 +196,9 @@
 # }
 # 
 # alias cd=cd_func
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+
+if [ -f ~/aliases ]; then
+    . ~/aliases
 fi
 
  for file in /etc/bash_completion.d/* ; do

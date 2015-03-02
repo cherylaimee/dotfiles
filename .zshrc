@@ -1,1 +1,1 @@
-source $HOME/.aliases
+source ~/home/chery_000/dotfiles/configs/aliases
