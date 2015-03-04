@@ -1,0 +1,39 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+setopt allexport
+EDITOR=vim; 
+
+ZSH_THEME="terminalparty"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+GOPATH=$HOME/go
+GOBIN=$HOME/go/bin
+generalPath="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+windowsPath="/c/Windows/System32:/c/Program Files/Perforce"
+
+export PATH=$HOME/bin:$generalPath:$GOPATH:$GOBIN:$windowsPath
+export ANSIBLE_HOSTS=$HOME/ansible/hosts
+
+PROMPT='%{$fg_bold[green]%}%{$fg[white]%}%{$reset_color%} '
+
+[ -e "${HOME}/.zsh_aliases" ] && source "${HOME}/.zsh_aliases"
+[ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
+
+# RPROMPT=$'$(git_super_status)'
+# PROMPT=$'%{$fg_bold[white]%}%M %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}%{$fg_bold[blue]%} % %{$reset_color%}'
+
+# Dotfiles update
+source ~/dotfiles/tools/check_for_upgrade.sh
